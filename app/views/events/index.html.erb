@@ -1,0 +1,6 @@
+<h1>Liste des évènements :</h1>
+
+
+<% @events.each do |un_event| %>
+<p><%= un_event.description %> <%= un_event.date %> <%= un_event.place %></p>
+<% end %>

@@ -4,7 +4,14 @@ Rails.application.routes.draw do
 
   post 'user' => 'user#create'
 
-  redirect_to '/users'
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
+  get '/loginok' => 'sessions#loginok'
+  get '/loginno' => 'sessions#loginno'
+
+  get '/events/index' => 'events#index'
 
   resources :users 
 
