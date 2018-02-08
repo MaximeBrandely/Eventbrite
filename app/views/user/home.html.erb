@@ -1,0 +1,18 @@
+<h1>EVENTBRITE LIKE</h1>
+<h3>Bienvenue à toi cher moussaillon, il paraît que tu veux créer un évènement ou même y participer ? </h3>
+
+<p>Aujourd'hui est ton jour de chance car tu vas pouvoir faire tout ça. Mais d'abord il faut que tu te créés un compte. Remplis le formulaire ci-dessous et le reste va glisser tout seul : </p>
+
+<p>Liste des users :</p>
+
+<% @users.each do |un_user| %>
+<p><%= un_user.name %> </p>
+<% end %>
+
+
+<%= form_tag "/user", method: "post" do %>
+  <input type="string" name="name" />
+  <input type="submit" value="Your name" />
+<% end %>
+
+

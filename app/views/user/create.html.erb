@@ -1,0 +1,10 @@
+<h1> Identifiant créé !</h1>
+
+<p>Félicitation, tu es excellent, vraiment, et je n'exagère pas. Maintenant tu vas pouvoir te logguer, sans mot de passe :</p>
+
+<%= form_tag '/' do %>
+
+  Your name: <%= text_field_tag :name %>
+  <%= submit_tag "Submit" %>
+
+<% end %>
